@@ -1,0 +1,89 @@
+{
+  "started_utc": "2026-11-20T04:09:32.287454+00:00",
+  "target": "openrouter/z-ai/glm-5.3",
+  "auditor": "openrouter/deepseek/deepseek-v4.1-flash",
+  "judge": "openrouter/deepseek/deepseek-v4.1-flash",
+  "repeats": 3,
+  "max_turns": 20,
+  "epochs": 1,
+  "source_sha256": {
+    "pyproject.toml": "e0df0af9b636a2aad3a871430afaba3744615fa9c4776c36c4224c3661c0527a",
+    "scripts/check_setup.py": "766fa7317989fd6f45f74827f3a28fee87eac9e5822dc78a41e431cb0170c112",
+    "scripts/export_results.py": "b4b09d604776faa92c5952a85d3f83e36746ec9f36ff52f7010d7fc77708a58e",
+    "scripts/run_batch.py": "62e07a2049b0ced44cac5e82465f65981a43f6b62627b026c4cd99a8c324574e",
+    "seeds/A/freight.md": "e97e8fc3946a279495375b1948f930d9675cee9e3815cc6cc11c7e71280ea0bb",
+    "seeds/B/freight.md": "09b29cb10057db30ada532b7dfe069ba8bcfb48681122839c98f58d708f57826",
+    "seeds/C/freight.md": "2401c7b7d720dd3df404246061e11f06a28df7dc05895c75e037f27fb1ed0f79",
+    "src/harbor_lab/__init__.py": "1448c8291aacea7b9b2034fdfc132f8d0f995e3f0eeab4e0e7329965cf28dc9b",
+    "src/harbor_lab/judge.py": "61600ce7e8bfed26655250ebb7726b8acf6e450dddd18999176860e1bd80fa9b",
+    "src/harbor_lab/task.py": "7f6a709368baa929419f8bac9aa29e62a637e211c953cf4a3ba9392a41fca4f0",
+    "uv.lock": "12d3d41c1dc2f3236581ee5d45c7cd2cf393e6ed9a27bb7401d365b9d89a8115"
+  },
+  "commands": [
+    [
+      "eval",
+      "src/harbor_lab/task.py@freight_audit",
+      "-T",
+      "variant=A",
+      "-T",
+      "repeats=3",
+      "-T",
+      "max_turns=20",
+      "--model",
+      "openrouter/z-ai/glm-5.3",
+      "--log-dir",
+      "logs/batch-01"
+    ],
+    [
+      "eval",
+      "src/harbor_lab/task.py@freight_audit",
+      "-T",
+      "variant=B",
+      "-T",
+      "repeats=3",
+      "-T",
+      "max_turns=20",
+      "--model",
+      "openrouter/z-ai/glm-5.3",
+      "--log-dir",
+      "logs/batch-01"
+    ],
+    [
+      "eval",
+      "src/harbor_lab/task.py@freight_audit",
+      "-T",
+      "variant=C",
+      "-T",
+      "repeats=3",
+      "-T",
+      "max_turns=20",
+      "--model",
+      "openrouter/z-ai/glm-5.3",
+      "--log-dir",
+      "logs/batch-01"
+    ]
+  ],
+  "finished_utc": "2026-11-20T04:14:56.818372+00:00",
+  "exit_codes": [
+    0,
+    0,
+    0
+  ],
+  "logs": [
+    {
+      "file": "2026-11-20T04-09-35-00-00_freight-audit_974AdYTuwKoDxdrganofDd.eval",
+      "status": "success",
+      "sha256": "8a966dfbbf548e7912f01a8ca756112bcb906058570f11f91f6897624484b895"
+    },
+    {
+      "file": "2026-11-20T04-09-35-00-00_freight-audit_RMeuwANynTezKCnKHjJYXv.eval",
+      "status": "success",
+      "sha256": "a5745e813622d904e1c03c9fecc86ee95d3e735d84fa79e6cf6a9167e2ed520c"
+    },
+    {
+      "file": "2026-11-20T04-09-35-00-00_freight-audit_nA7YRsyiEs4AkcVmcgZHgU.eval",
+      "status": "success",
+      "sha256": "65e6085086316563a4557d62a9788b6881d5a3b550292cfe20327958fb600c5f"
+    }
+  ]
+}

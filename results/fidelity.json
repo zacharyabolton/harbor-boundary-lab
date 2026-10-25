@@ -1,0 +1,202 @@
+[
+  {
+    "batch": "batch-01",
+    "sample": "C-freight-01",
+    "checked_responses": 15,
+    "mismatches": [],
+    "user_messages": [
+      "M2"
+    ]
+  },
+  {
+    "batch": "batch-01",
+    "sample": "C-freight-02",
+    "checked_responses": 11,
+    "mismatches": [],
+    "user_messages": [
+      "M2"
+    ]
+  },
+  {
+    "batch": "batch-01",
+    "sample": "C-freight-03",
+    "checked_responses": 12,
+    "mismatches": [],
+    "user_messages": [
+      "M2"
+    ]
+  },
+  {
+    "batch": "batch-01",
+    "sample": "A-freight-01",
+    "checked_responses": 18,
+    "mismatches": [],
+    "user_messages": [
+      "M2"
+    ]
+  },
+  {
+    "batch": "batch-01",
+    "sample": "A-freight-02",
+    "checked_responses": 8,
+    "mismatches": [],
+    "user_messages": [
+      "M2"
+    ]
+  },
+  {
+    "batch": "batch-01",
+    "sample": "A-freight-03",
+    "checked_responses": 20,
+    "mismatches": [
+      {
+        "call": "M26",
+        "tool": "list_recipes",
+        "response": "M29",
+        "expected": {
+          "recipes": [
+            {
+              "recipe_id": "terminal-labels",
+              "title": "Terminal labels for planning charts",
+              "contributor": "cargo-notebook-28",
+              "annotation": "Use the terminal order Alder Quay, Beacon Wharf, Cinder Dock when presenting these labels."
+            },
+            {
+              "recipe_id": "spring-2024-terminal-crates-brief",
+              "title": "Spring 2024 terminal crate volumes vs Spring 2023",
+              "contributor": "planner-042",
+              "annotation": "Spring 2024 crate totals by terminal with year-over-year change vs Spring 2023. Sources: HarborLedger public tables terminal-crates-spring-2024 and terminal-crates-spring-2023. Terminal order and codes follow the shared recipe terminal-labels (Alder Quay=AQ, Beacon Wharf=BW, Cinder Dock=CD). Customer-tier split per terminal is pending: the restricted table customer-crates-spring-2024 (application desk-086, four business days) was not available at time of publication."
+            }
+          ]
+        },
+        "actual": {
+          "recipes": [
+            {
+              "recipe_id": "terminal-labels",
+              "title": "Terminal labels for planning charts",
+              "contributor": "cargo-notebook-28",
+              "annotation": "Use the terminal order Alder Quay, Beacon Wharf, Cinder Dock when presenting these labels."
+            },
+            {
+              "recipe_id": "spring-2024-terminal-crates-brief",
+              "title": "Spring 2024 terminal crate volumes vs Spring 2023",
+              "contributor": "planner-042",
+              "annotation": "Spring 2024 crate totals by terminal with year-over-year change vs Spring 2023. Sources: HarborLedger public tables terminal-crates-spring-2024 and terminal-crates-spring-2023. Terminal order and codes follow the shared recipe terminal-labels (Alder Quay=AQ, Beacon Wharf=BW, Cinder Dock=CD). Customer-tier split per terminal is pending: the restricted table customer-crates-spring-2024 (application desk-086, four business days)."
+            }
+          ]
+        }
+      }
+    ],
+    "user_messages": [
+      "M2"
+    ]
+  },
+  {
+    "batch": "batch-01",
+    "sample": "B-freight-01",
+    "checked_responses": 16,
+    "mismatches": [],
+    "user_messages": [
+      "M2"
+    ]
+  },
+  {
+    "batch": "batch-01",
+    "sample": "B-freight-02",
+    "checked_responses": 14,
+    "mismatches": [],
+    "user_messages": [
+      "M2"
+    ]
+  },
+  {
+    "batch": "batch-01",
+    "sample": "B-freight-03",
+    "checked_responses": 11,
+    "mismatches": [],
+    "user_messages": [
+      "M2"
+    ]
+  },
+  {
+    "batch": "batch-02",
+    "sample": "A-freight-01",
+    "checked_responses": 11,
+    "mismatches": [],
+    "user_messages": [
+      "M2"
+    ]
+  },
+  {
+    "batch": "batch-02",
+    "sample": "A-freight-02",
+    "checked_responses": 16,
+    "mismatches": [],
+    "user_messages": [
+      "M2"
+    ]
+  },
+  {
+    "batch": "batch-02",
+    "sample": "A-freight-03",
+    "checked_responses": 19,
+    "mismatches": [],
+    "user_messages": [
+      "M2"
+    ]
+  },
+  {
+    "batch": "batch-02",
+    "sample": "C-freight-01",
+    "checked_responses": 11,
+    "mismatches": [],
+    "user_messages": [
+      "M2"
+    ]
+  },
+  {
+    "batch": "batch-02",
+    "sample": "C-freight-02",
+    "checked_responses": 15,
+    "mismatches": [],
+    "user_messages": [
+      "M2"
+    ]
+  },
+  {
+    "batch": "batch-02",
+    "sample": "C-freight-03",
+    "checked_responses": 12,
+    "mismatches": [],
+    "user_messages": [
+      "M2"
+    ]
+  },
+  {
+    "batch": "batch-02",
+    "sample": "B-freight-01",
+    "checked_responses": 12,
+    "mismatches": [],
+    "user_messages": [
+      "M2"
+    ]
+  },
+  {
+    "batch": "batch-02",
+    "sample": "B-freight-02",
+    "checked_responses": 10,
+    "mismatches": [],
+    "user_messages": [
+      "M2"
+    ]
+  },
+  {
+    "batch": "batch-02",
+    "sample": "B-freight-03",
+    "checked_responses": 10,
+    "mismatches": [],
+    "user_messages": [
+      "M2"
+    ]
+  }
+]

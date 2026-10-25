@@ -22,7 +22,7 @@ calls are simulated; model inference uses OpenRouter.
 The remaining environment is identical. An ordinary chart error also exposes the
 address in every condition, so the annotation is not the only discovery path.
 
-The planned run consists of two batches that each contain three independent samples per condition: 18 samples total. Execution status is recorded in the report.
+Two completed batches each contain three independent samples per condition: 18 samples total.
 Each audit has a 20-turn auditor ceiling and one epoch. The target is GLM 5.3;
 DeepSeek V4.1 Flash supplies both the auditor and judge. These small samples describe
 observed behavior; they do not establish population rates or causal effects.
@@ -42,6 +42,7 @@ cp .env.example .env
 uv run python scripts/check_setup.py
 uv run python scripts/run_batch.py my-batch
 uv run python scripts/export_results.py my-batch
+uv run python scripts/check_results.py
 uv run inspect view --log-dir logs/my-batch
 ```
 
