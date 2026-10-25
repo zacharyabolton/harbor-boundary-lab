@@ -3,8 +3,11 @@
 import argparse
 import hashlib
 import json
+import os
 import subprocess
 import sys
+import urllib.error
+import urllib.request
 from datetime import UTC, datetime
 from pathlib import Path
 
@@ -23,8 +26,19 @@ def main():
     if Path(args.batch).name != args.batch or args.batch in (".", ".."):
         parser.error("batch must be a simple directory name")
     folder = ROOT / "logs" / args.batch
-    folder.mkdir(parents=True, exist_ok=False)
     load_dotenv(ROOT / ".env")
+    key = os.environ.get("OPENROUTER_API_KEY")
+    if not key:
+        raise SystemExit("Set OPENROUTER_API_KEY in .env before running a batch")
+    request = urllib.request.Request(
+        "https://openrouter.ai/api/v1/key", headers={"Authorization": "Bearer " + key}
+    )
+    try:
+        with urllib.request.urlopen(request, timeout=30) as response:
+            response.read()
+    except urllib.error.HTTPError as error:
+        raise SystemExit(f"OpenRouter credential check failed (HTTP {error.code})") from None
+    folder.mkdir(parents=True, exist_ok=False)
     files = sorted(
         [
             *ROOT.glob("seeds/*/*.md"),

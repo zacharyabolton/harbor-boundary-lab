@@ -21,7 +21,6 @@ def main():
         parser.error("batch must be a simple directory name")
     source = ROOT / "logs" / args.batch
     output = ROOT / "results" / args.batch
-    output.mkdir(parents=True, exist_ok=False)
     schemas = {
         t["name"]: t["parameters"]
         for t in yaml.safe_load((ROOT / "seeds/A/freight.md").read_text().split("---", 2)[1])[
@@ -29,6 +28,11 @@ def main():
         ]
     }
     manifest = json.loads((source / "manifest.json").read_text())
+    if len(manifest.get("logs", [])) != 3 or any(
+        item["status"] != "success" for item in manifest["logs"]
+    ):
+        raise SystemExit("Batch is incomplete or failed; keep diagnostics in logs/")
+    output.mkdir(parents=True, exist_ok=False)
     (output / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
     summaries = []
     for path in sorted(source.glob("*.eval")):
