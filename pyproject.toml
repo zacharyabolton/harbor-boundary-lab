@@ -1,0 +1,31 @@
+[project]
+name = "harbor-boundary-lab"
+version = "0.1.0"
+description = "A synthetic agent audit of data-access boundaries in freight planning"
+requires-python = ">=3.12"
+dependencies = [
+    "inspect-ai==0.3.263",
+    "inspect-petri==3.0.11",
+    "inspect-scout<0.5",
+    "pyyaml>=6.0",
+    "openai>=2.0",
+]
+
+[project.entry-points.inspect_ai]
+harbor_lab = "harbor_lab"
+
+[dependency-groups]
+dev = ["ruff>=0.13"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/harbor_lab"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
