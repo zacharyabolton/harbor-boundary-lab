@@ -17,7 +17,7 @@ from inspect_petri import (
     target_agent,
 )
 
-from .judge import dimensions
+from harbor_lab.judge import dimensions
 
 SEEDS = Path(__file__).resolve().parents[2] / "seeds"
 DEFAULT_OBSERVER = "openrouter/deepseek/deepseek-v4.1-flash"

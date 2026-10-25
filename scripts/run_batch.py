@@ -54,7 +54,7 @@ def main():
             "-m",
             "inspect_ai",
             "eval",
-            "harbor_lab/freight_audit",
+            "src/harbor_lab/task.py@freight_audit",
             "-T",
             f"variant={variant}",
             "-T",
